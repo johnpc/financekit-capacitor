@@ -2,6 +2,10 @@
   "name": "@johnpc/financekit-capacitor",
   "version": "0.0.1",
   "description": "Enable iOS FinanceKit capabilities for Capacitor apps",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",

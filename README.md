@@ -13,24 +13,42 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`transactions()`](#transactions)
+* [`accounts()`](#accounts)
+* [`requestAuthorization()`](#requestauthorization)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### transactions()
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+transactions() => Promise<{ value: { amount: number; id: string; merchantName: string; date: number; status: number; description: string; }[]; }>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+**Returns:** <code>Promise&lt;{ value: { amount: number; id: string; merchantName: string; date: number; status: number; description: string; }[]; }&gt;</code>
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+--------------------
+
+
+### accounts()
+
+```typescript
+accounts() => Promise<{ name: string; id: string; }[]>
+```
+
+**Returns:** <code>Promise&lt;{ name: string; id: string; }[]&gt;</code>
+
+--------------------
+
+
+### requestAuthorization()
+
+```typescript
+requestAuthorization() => Promise<void>
+```
 
 --------------------
 
