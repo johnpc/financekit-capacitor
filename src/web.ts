@@ -14,4 +14,8 @@ export class JPCFinanceKitWeb extends WebPlugin implements JPCFinanceKitPlugin {
   async requestAuthorization(): Promise<void> {
     throw this.unimplemented('Not implemented on web.');
   }
+
+  async authorizationStatus(): Promise<{value: {status: number}}> {
+    throw this.unimplemented('Not implemented on web.');
+  }
 }

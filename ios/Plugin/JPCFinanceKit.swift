@@ -7,6 +7,11 @@ public class JPCFinanceKit: NSObject {
             return try await fs.accounts(query: AccountQuery(sortDescriptors: []))
     }
 
+    public func authorizationStatus() async throws -> Bool {
+            let status = try await fs.authorizationStatus()
+            return AuthorizationStatus.authorized == status
+    }
+
     public func transactions() async throws -> [Transaction] {
         func addOrSubtractMonth(month: Int) -> Date {
             Calendar.current.date(byAdding: .month, value: month, to: Date())!

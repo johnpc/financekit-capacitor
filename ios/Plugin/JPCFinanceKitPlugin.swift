@@ -48,4 +48,18 @@ public class JPCFinanceKitPlugin: CAPPlugin {
     @objc func requestAuthorization(_ call: CAPPluginCall) {
         implementation.requestAuthorization()
     }
+
+
+    @objc func authorizationStatus(_ call: CAPPluginCall) {
+        Task {
+            do {
+                let status = try await implementation.authorizationStatus();
+                call.resolve([
+                    "value": status
+                ])
+            } catch {
+                call.reject("my error")
+            }
+        }
+    }
 }

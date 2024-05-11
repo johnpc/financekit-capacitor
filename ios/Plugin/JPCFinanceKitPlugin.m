@@ -7,4 +7,5 @@ CAP_PLUGIN(JPCFinanceKitPlugin, "JPCFinanceKit",
    CAP_PLUGIN_METHOD(transactions, CAPPluginReturnPromise);
    CAP_PLUGIN_METHOD(accounts, CAPPluginReturnPromise);
     CAP_PLUGIN_METHOD(requestAuthorization, CAPPluginReturnNone);
+    CAP_PLUGIN_METHOD(authorizationStatus, CAPPluginReturnNone);
 )

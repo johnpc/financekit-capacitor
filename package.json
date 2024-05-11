@@ -1,6 +1,6 @@
 {
   "name": "@johnpc/financekit-capacitor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Enable iOS FinanceKit capabilities for Capacitor apps",
   "private": false,
   "publishConfig": {

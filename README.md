@@ -16,6 +16,7 @@ npx cap sync
 * [`transactions()`](#transactions)
 * [`accounts()`](#accounts)
 * [`requestAuthorization()`](#requestauthorization)
+* [`authorizationStatus()`](#authorizationstatus)
 
 </docgen-index>
 
@@ -49,6 +50,17 @@ accounts() => Promise<{ name: string; id: string; }[]>
 ```typescript
 requestAuthorization() => Promise<void>
 ```
+
+--------------------
+
+
+### authorizationStatus()
+
+```typescript
+authorizationStatus() => Promise<{ value: { status: number; }; }>
+```
+
+**Returns:** <code>Promise&lt;{ value: { status: number; }; }&gt;</code>
 
 --------------------
 
