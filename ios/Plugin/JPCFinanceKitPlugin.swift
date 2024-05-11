@@ -25,14 +25,15 @@ public class JPCFinanceKitPlugin: CAPPlugin {
             }
         }
     }
-    
+
     @objc func transactions(_ call: CAPPluginCall) {
         Task {
             do {
                 let transactions = try await implementation.transactions();
                 if (!transactions.isEmpty) {
                    call.resolve([
-                    "value": transactions.map{ ["amount": $0.transactionAmount.amount, "id": $0.id.uuidString, "merchantName": $0.merchantName, "date": $0.transactionDate.timeIntervalSince1970, "status": $0.status.rawValue, "description": $0.originalTransactionDescription] }
+                    "value": transactions.map{ ["amount": $0.transactionAmount.amount, "id": $0.id.uuidString, "merchantName": $0.merchantName, "date": $0.transactionDate.timeIntervalSince1970, "status": $0.status.rawValue, "description": $0.originalTransactionDescription, "type": $0.transactionType
+                        .rawValue] }
                     ])
                 } else {
                    call.reject("my error")

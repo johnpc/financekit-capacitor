@@ -25,10 +25,10 @@ npx cap sync
 ### transactions()
 
 ```typescript
-transactions() => Promise<{ value: { amount: number; id: string; merchantName: string; date: number; status: number; description: string; }[]; }>
+transactions() => Promise<{ value: { amount: number; id: string; merchantName: string; date: number; status: number; description: string; type: number; }[]; }>
 ```
 
-**Returns:** <code>Promise&lt;{ value: { amount: number; id: string; merchantName: string; date: number; status: number; description: string; }[]; }&gt;</code>
+**Returns:** <code>Promise&lt;{ value: { amount: number; id: string; merchantName: string; date: number; status: number; description: string; type: number; }[]; }&gt;</code>
 
 --------------------
 

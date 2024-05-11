@@ -7,7 +7,7 @@ export class JPCFinanceKitWeb extends WebPlugin implements JPCFinanceKitPlugin {
     throw this.unimplemented('Not implemented on web.');
   }
 
-  async transactions(): Promise<{value: {amount: number, id: string, merchantName: string, date: number, status: number, description: string}[]}> {
+  async transactions(): Promise<{value: {amount: number, id: string, merchantName: string, date: number, status: number, description: string, type: number}[]}> {
     throw this.unimplemented('Not implemented on web.');
   }
 
